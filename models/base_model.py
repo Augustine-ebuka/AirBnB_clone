@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Base model class where other classes will inherit form"""
 import models
 import uuid
