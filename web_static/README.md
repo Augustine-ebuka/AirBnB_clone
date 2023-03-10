@@ -12,6 +12,5 @@
 
 ### Environment
 * Languages: HTML, CSS
-* OS: Ubuntu 14.04 LTS
-* Style guidelines: ```./wc3validator.py [filename]```
+* OS: Ubuntu 14.04 - Python 3.4
 * Preview: paste index.html link and run on: http://htmlpreview.github.io/?
