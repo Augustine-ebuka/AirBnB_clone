@@ -8,7 +8,7 @@
 > relevant to the finished product. The highlest numbered index.html file is
 > likewise the most relevant to the finished product.
 
-![M](https://github.com/Augustine-ebuka/AirBnB_clone/blob/main/web_static/images/Airbnbpng.png)
+![HBNB Project](https://github.com/Augustine-ebuka/AirBnB_clone/blob/main/web_static/images/page-shot.png)
 
 ### Environment
 * Languages: HTML, CSS
