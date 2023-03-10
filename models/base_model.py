@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+"""Base model class where other classes will inherit from"""
+import models
+import uuid
+import datetime
+
+
 class BaseModel:
     """Represents the BaseModel of the HBnB project."""
 
@@ -23,8 +30,8 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """Updates the public instance attribut
-        e updated_at with the current datetime"""
+        """Updates the public instance attribute updated_at with
+        the current datetime"""
         self.updated_at = datetime.today()
         models.storage.save(self)
 
@@ -43,3 +50,4 @@ class BaseModel:
 
 
 if __name__ == "__main__":
+    BaseModel
