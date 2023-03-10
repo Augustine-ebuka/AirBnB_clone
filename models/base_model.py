@@ -1,10 +1,15 @@
+#!/usr/bin/python3
+"""Base model class where other classes will inherit form"""
+import models
+import uuid
+import datetime
+
+
 class BaseModel:
     """Represents the BaseModel of the HBnB project."""
-
+    
     def __init__(self, *args, **kwargs):
-        """
-        Initialize a new BaseModel.
-
+        """Initialize a new BaseModel.
         Args:
             *args (any): Unused.
             **kwargs (dict): Key/value pairs of attributes.
@@ -25,11 +30,18 @@ class BaseModel:
     def save(self):
         """Updates the public instance attribut
         e updated_at with the current datetime"""
+
+        """updates the public instance attribute updated_at
+        with the current datetime"""
+
         self.updated_at = datetime.today()
         models.storage.save(self)
 
     def to_dict(self):
         """Returns the key/value instance of the object"""
+
+        """retunrns the key/value instance of the object"""
+        
         rdict = self.__dict__.copy()
         rdict["created_at"] = self.created_at.isoformat()
         rdict["updated_at"] = self.updated_at.isoformat()
@@ -42,4 +54,7 @@ class BaseModel:
         return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
 
 
+
 if __name__ == "__main__":
+======= BaseModel
+
