@@ -2,7 +2,7 @@
 """Base model class where other classes will inherit from"""
 import models
 import uuid
-import datetime
+from datetime import datetime
 
 
 class BaseModel:
