@@ -1,28 +1,24 @@
 #!/usr/bin/env python3
-"""Console program for AirBnB"""
+"""Module for the entry point of the command interpreter."""
 
 import cmd
 from models.base_model import BaseModel
 from models import storage
-import re
 import json
-"""This is the model of AirBnB Clone, interpreter programe
-    As per the requrement of ALX, a class HBNB will be declared
-    containing the instances and attribute of this program.
-"""
 
 
 class HBNBCommand(cmd.Cmd):
 
-    intro = "Wecome to Hbnb Shell\n"
+    """Class for the command interpreter."""
+
     prompt = "(hbnb) "
 
     def default(self, line):
-        """Catch commands if nothing matches"""
+        """Catch commands if nothing else matches then."""
         self.precmd(line)
 
     def precmd(self, line):
-        """Interpret command to test for class.syntax()"""
+        """Intercepts commands to test for class.syntax()"""
         match = re.search(r"^(\w*)\.(\w+)(?:\(([^)]*)\))$", line)
         if not match:
             return line
@@ -211,7 +207,7 @@ class HBNBCommand(cmd.Cmd):
                     try:
                         value = cast(value)
                     except ValueError:
-                        pass  # fine, stay a string then
+                        pass
                 setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
 
